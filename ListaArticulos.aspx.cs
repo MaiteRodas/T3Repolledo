@@ -19,8 +19,11 @@ namespace Tp3RepolledoMaite
                 ArticuloNegocio negocio = new ArticuloNegocio();
                 listaArticulos = negocio.Listar();
 
+                Session[Session.SessionID + "listaArticulos"] = listaArticulos;
+
                 if( !IsPostBack)
                 {
+                    /// contrala que no se haga un paso doble.
                     
                 }
 
@@ -31,6 +34,11 @@ namespace Tp3RepolledoMaite
             }
 
 
+
+        }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
 
         }
     }

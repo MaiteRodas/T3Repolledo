@@ -10,8 +10,16 @@
         <h5 class="card-title"><% =articulo.Nombre %> </h5>
                <asp:Label Text="Descripción:" runat="server" />
            <p class="card-txt"> <%=articulo.Descripcion %></p>
-                <asp:Label Text="Precio:" runat="server" />
+                <asp:Label Text="Precio: S." runat="server" />
            <p class="card-Desc"> <%=articulo.Precio %></p>
+                <asp:Label Text="Marca:" runat="server" />
+           <p class="card-Marc"> <%=articulo.Marca %></p>
+                <asp:Label Text="Categoría:" runat="server" />
+           <p class="card-Desc"> <%=articulo.Categoria %></p>
+
+
+
+
     </div>
     </div>
 </asp:Content>
