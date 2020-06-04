@@ -11,7 +11,17 @@ namespace Tp3RepolledoMaite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                lblBienvenida.Text = lblBienvenida.Text = Session[Session.SessionID + "lblBienvenida"].ToString();
+            }
+            catch(Exception ex)
+            {
+                Session.Add("Error", ex.ToString());
+                Response.Redirect("Error.aspx");
 
+            }
+           
         }
     }
 }

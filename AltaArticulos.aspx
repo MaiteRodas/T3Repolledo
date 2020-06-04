@@ -16,11 +16,8 @@
                         <label for="exampleInputPassword1">Password</label>
                         <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server"/>
                     </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                    <asp:Button Text="Aceptar" ID="btnAceptar" cssClass="btn btn-primary"  runat="server"  />
                 </div>
             </div>
             </div>
