@@ -12,7 +12,16 @@ namespace Tp3RepolledoMaite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            try
+            {
+                Session.Add(Session.SessionID + "NombreBienvenida", txtemail.Text);
+            }
+
+            catch (Exception Ex)
+            {
+                Session["Error" + Session.SessionID] = "No agrego nada al carrito";
+                Response.Redirect("Error.aspx");
+            }
         }
        
       

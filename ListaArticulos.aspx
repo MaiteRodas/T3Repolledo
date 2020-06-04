@@ -14,7 +14,7 @@
                         <h5 class="card-title"><% =item.Nombre %> </h5>
                         <p class="card-txt"><%=item.Descripcion %></p>
                         <a href="ArticulosDetails.aspx?idAr=<% = item.IdArticulo.ToString() %>" class="btn btn-primary">Seleccionar</a>
-                        <a href="AgregarCarrito.aspx?idAr=<% = item.IdArticulo.ToString() %>" class="btn btn-primary">Agregar</a>
+                        <a href="AgregarCarrito.aspx?agCar=<% = item.IdArticulo.ToString() %>" class="btn btn-primary">Agregar</a>
 
                     </div>
                 </div>

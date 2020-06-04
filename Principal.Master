@@ -31,9 +31,6 @@
                 <a class="nav-link" href="MostrarCarrito.aspx">Mostrar elementos Seleccionados</a>
               </li>
             </ul>
-            <span class="navbar-text">
-              Navbar text with an inline element
-            </span>
           </div>
         </nav>
     <form id="form1" runat="server">
