@@ -18,6 +18,7 @@ namespace Tp3RepolledoMaite
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
                 listaArticulos = negocio.Listar();
+                
 
                 Session[Session.SessionID + "listaArticulos"] = listaArticulos;
 

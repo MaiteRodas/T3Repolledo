@@ -28,7 +28,7 @@
                 <a class="nav-link" href="AgregarCarrito.aspx">Agregar al carrito</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="MostrarCarrito.aspx.cs">Mostrar elementos Seleccionados</a>
+                <a class="nav-link" href="MostrarCarrito.aspx">Mostrar elementos Seleccionados</a>
               </li>
             </ul>
             <span class="navbar-text">
