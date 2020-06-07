@@ -36,7 +36,7 @@
                        <td> <a href="AgregarCarrito.aspx?agCar=<% =art.IdArticulo.ToString() %>" class="btn btn-primary">Agregar</a> </td>
                         <td><a href="AgregarCarrito.aspx?idQuitar=<% = art.IdArticulo.ToString() %>" class="btn btn-primary">Quitar</a></td>  
                     </tr>
-                    <%=Total += art.Precio  %>
+                    <%Total += art.Precio;  %>
                     <%}
                         
                     %>

@@ -49,7 +49,7 @@ namespace Tp3RepolledoMaite
             catch (Exception ex)
             {
                 Session["Error" + Session.SessionID] = "No agrego nada al carrito";
-                Response.Redirect("Error.aspx");
+                Response.Redirect("ListaArticulos.aspx");
             }
 
         }
