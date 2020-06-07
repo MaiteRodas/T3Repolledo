@@ -11,7 +11,7 @@ namespace Tp3RepolledoMaite
 {
 
 
-    public partial class Default
+    public partial class Index
     {
 
         /// <summary>

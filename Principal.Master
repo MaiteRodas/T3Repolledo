@@ -25,10 +25,10 @@
                 <a class="nav-link" href="ListaArticulos.aspx">Lista de Artículos<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="AgregarCarrito.aspx">Agregar al carrito</a>
+                <a class="nav-link" href="AgregarCarrito.aspx">Lista de Elementos Seleccionados</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="MostrarCarrito.aspx">Mostrar elementos Seleccionados</a>
+                <a class="nav-link" href="Introduccion.aspx">Pequeña Introducción</a>
               </li>
             </ul>
           </div>

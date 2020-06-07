@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h1>Tus articulos seleccionados son: </h1>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -11,6 +12,9 @@
                     <tr>
                         <td>Nombre</td>
                         <td>Tipo</td>
+                        <td>Precio</td>
+                        <td>Total</td>
+
                     </tr>
 
 
@@ -20,8 +24,10 @@
 
                     <tr>
                         <td><% =art.Nombre %></td>
-                        <td><% =art.IdArticulo %></td>
-
+                        <td><% =art.Descripcion %></td>
+                        <td><% =art.Precio %></td>
+                        
+                        <td><a href="AgregarCarrito.aspx?idQuitar=<% = art.IdArticulo.ToString() %>" class="btn btn-primary">Quitar</a></td>
                     </tr>
                     <%}
                     %>

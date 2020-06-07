@@ -70,8 +70,9 @@
     <Content Include="AgregarCarrito.aspx" />
     <Content Include="AltaArticulos.aspx" />
     <Content Include="ArticulosDetails.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Introduccion.aspx" />
     <Content Include="ListaArticulos.aspx" />
     <Content Include="MostrarCarrito.aspx" />
     <Content Include="Web.config" />
@@ -98,19 +99,26 @@
     <Compile Include="ArticulosDetails.aspx.designer.cs">
       <DependentUpon>ArticulosDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Introduccion.aspx.cs">
+      <DependentUpon>Introduccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Introduccion.aspx.designer.cs">
+      <DependentUpon>Introduccion.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaArticulos.aspx.cs">
       <DependentUpon>ListaArticulos.aspx</DependentUpon>

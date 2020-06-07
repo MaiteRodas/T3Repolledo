@@ -17,31 +17,35 @@ namespace Tp3RepolledoMaite
 
             try
             {
-               
-                 List<Articulo> listaOriginal = (List<Articulo>)Session[Session.SessionID +"listaArticulos"];
-                 int articuloSeleccionado = Convert.ToInt32(Request.QueryString["agCar"]);
-                 Articulo articulo = listaOriginal.Find(x => x.IdArticulo == articuloSeleccionado);
-                 
-                listadeCarrritos = (List<Articulo>)Session["ListadelCarrito"];
-                if (listadeCarrritos == null) { listadeCarrritos = new List<Articulo>(); }
-                   
-                 listadeCarrritos.Add(articulo);
-                Session[Session.SessionID + "ListadelCarrito"] = listadeCarrritos;// la guardo para actualizarlo
+                listadeCarrritos = (List<Articulo>)Session[Session.SessionID + "ListadelCarrito"];/// obtengo la lista de favoritos
 
-               /* ArticuloNegocio negocio = new ArticuloNegocio();
-                dvbListaFavoritos.DataSource = negocio.Listar();
-                dvbListaFavoritos.DataBind();*/
+                var artiQuitar = Request.QueryString["idQuitar"];// para eliminar el articulo seleccionado
 
+                if(artiQuitar != null)
+                {
+                    listadeCarrritos = (List<Articulo>)Session[Session.SessionID + "ListadelCarrito"];
+                    Articulo articuloQuitar = listadeCarrritos.Find(x => x.IdArticulo == int.Parse(artiQuitar));
+                    listadeCarrritos.Remove(articuloQuitar);
+                }
+                else if(Request.QueryString["agCar"]!=null)
+                {
+                    List<Articulo> listaOriginal = (List<Articulo>)Session[Session.SessionID + "listaArticulos"]; // lista original
+                    int articuloSeleccionado = Convert.ToInt32(Request.QueryString["agCar"]);
+                    Articulo articulo = listaOriginal.Find(x => x.IdArticulo == articuloSeleccionado);
 
+                    if (listadeCarrritos == null)
+                        listadeCarrritos = new List<Articulo>();
 
+                    listadeCarrritos.Add(articulo);
+                    Session[Session.SessionID + "ListadelCarrito"] = listadeCarrritos;// la guardo para actualizarlo
+                    double total =+ articulo.Precio;
 
-
-
+                }     
 
             }
             catch (Exception ex)
             {
-               Session["Error" + Session.SessionID] = "No agrego nada al carrito";
+                Session["Error" + Session.SessionID] = "No agrego nada al carrito";
                 Response.Redirect("Error.aspx");
             }
 
