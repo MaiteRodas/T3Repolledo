@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
@@ -17,7 +18,9 @@ namespace Tp3RepolledoMaite
 
             try
             {
+                
                 listadeCarrritos = (List<Articulo>)Session[Session.SessionID + "ListadelCarrito"];/// obtengo la lista de favoritos
+                
 
                 var artiQuitar = Request.QueryString["idQuitar"];// para eliminar el articulo seleccionado
 

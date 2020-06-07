@@ -16,6 +16,7 @@ namespace Tp3RepolledoMaite
         {
             try   
             {
+
                 ArticuloNegocio negocio = new ArticuloNegocio();
                 listaArticulos = negocio.Listar();
 

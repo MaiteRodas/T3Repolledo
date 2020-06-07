@@ -8,14 +8,13 @@
 
                 <% foreach (var item in listaArticulos)
                     { %>
-                <div class=" card " style="width: 18rem;">
-                    <img src="<% = item.ImagenURL%> " class="card-img-top" alt="...">
-                    <div class="card-boby">
-                        <h5 class="card-title"><% =item.Nombre %> </h5>
-                        <p class="card-txt"><%=item.Descripcion %></p>
-                        <a href="ArticulosDetails.aspx?idAr=<% = item.IdArticulo.ToString() %>" class="btn btn-primary">Seleccionar</a>
+                <div class="card" style="width: 18rem;">
+                    <img src="<% = item.ImagenURL%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><% =item.Nombre %></h5>
+                        <p class="card-text"><%=item.Descripcion %></p>
+                         <a href="ArticulosDetails.aspx?idAr=<% = item.IdArticulo.ToString() %>" class="btn btn-primary">Detalle</a>
                         <a href="AgregarCarrito.aspx?agCar=<% = item.IdArticulo.ToString() %>" class="btn btn-primary">Agregar</a>
-
                     </div>
                 </div>
                 <% } %>
